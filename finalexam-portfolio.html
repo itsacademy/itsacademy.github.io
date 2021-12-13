@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="themefisher-font/style.css">
+    <style>
+        /* @import url("https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,700|Source+Sans+Pro:400,600"); */
+
+        .all {
+            height: 100%;
+            width: 100%;
+            font-family: 'themefisher-font' !important;
+
+        }
+
+
+
+        .full {
+
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .headbgimg {
+            background-image: url("images/about/about-header.jpg");
+
+
+            min-height: 330px;
+
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+            position: relative;
+        }
+
+        .qwer {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+
+        .single-page-header:before {
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+        .biggy {
+
+            width: 100%;
+            height: 20%;
+            line-height: 1.4;
+            font-family: "Source Sans Pro", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            position: absolute;
+
+
+
+
+        }
+
+        .linehead {
+            justify-content: space-around;
+            align-items: center;
+
+
+
+        }
+
+        @media(min-width: 700px) {
+            .red-color {
+                color: black;
+            }
+        }
+
+        .filterbgheader {
+            background-color: black;
+
+        }
+
+
+
+        .mg-vy div {
+            overflow: hidden;
+        }
+
+        .buttonheader {
+            border-radius: 15px;
+            background-color: #30b5ff;
+            border: none;
+        }
+
+
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background-color: white;
+        }
+
+        .containerbody {
+            margin-top: 500px;
+        }
+
+
+
+        .circlebg {
+            background-color: #30b5ff;
+            border: none;
+            border-radius: 25px;
+            width: 40px;
+            height: 40px;
+
+        }
+
+        .iconbg {
+            align-items: center;
+            padding: 30px;
+            max-width: 300px;
+            line-height: 1.4;
+            font-family: "Source Sans Pro", sans-serif;
+            -webkit-font-smoothing: antialiased;
+
+        }
+
+        .iconcirc {
+            font-size: 30px;
+
+
+
+        }
+
+        .font-size-big {
+            font-size: 2em !important;
+        }
+
+        .about-2 .checklist li:before {
+            position: absolute;
+            margin-right: 12px;
+            margin-left: -45px;
+            content: "\f375";
+            font-family: "themefisher-font";
+            opacity: 1;
+            border-radius: 50%;
+            padding: 2px 8px;
+            font-size: 20px;
+        }
+
+        .pt2 {
+            background-color: #f7f7f7;
+        }
+
+        .uli {
+            max-width: 550px;
+        }
+
+        .callbg {
+            background-image: url("images/call-to-action/call-to-action-bg-2.jpg");
+
+
+            min-height: 330px;
+
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+            position: relative;
+        }
+
+        .checklist li:before {
+            position: absolute;
+            margin-right: 12px;
+            margin-left: -45px;
+            content: "\f375";
+            font-family: "themefisher-font";
+            opacity: 1;
+            border-radius: 50%;
+            padding: 2px 8px;
+            font-size: 20px;
+
+        }
+
+        ul.checklist {
+            list-style: none;
+        }
+
+        .counters-item:before {
+            background: #f9f9f9;
+            content: "";
+            margin-top: -27.5px;
+            height: 55px;
+            width: 1px;
+            position: absolute;
+            right: -15px;
+            top: 50%;
+        }
+
+        .bgblue {
+            background-color: #28abea;
+        }
+
+        .pfpguy {
+            border-radius: 50%;
+            width: 15%;
+            height: auto;
+        }
+
+        .clienttogo1 {
+            position: relative;
+            top: -30px;
+        }
+
+
+
+        .footerbg {
+            background-color: #222222;
+            line-height: 1.4;
+            font-family: "Source Sans Pro", sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .footersize {
+            font-size: 11px;
+        }
+
+        .topbody {
+            display: flex;
+            flex-direction: row;
+            margin: 0 auto;
+            justify-content: center;
+            font-size: 10px;
+
+        }
+
+        .e {
+            margin-left: 2px;
+            background-color: #28abea;
+            padding: 5px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .f {
+            margin-top: 30px;
+        }
+
+     
+    </style>
+
+<body>
+
+
+
+    <header>
+        <div class="container ">
+            <div class="row navcontain">
+                <div class="col-sm-4 text-center text-dark bg-white">
+                    <h2><b>BINGO.</b></h2>
+                </div>
+                <div class="col-sm-8 d-flex text-light linehead mg-vy pl-sm-5 bg-white">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <button class="navbar-toggler navimg bg-white card border" type="card" data-toggle="collapse"
+                            data-target="#navigator">
+                            <span class="navbar-toggler-icon "></span>
+                        </button>
+                        <ul class="navbar-nav ml-auto text-center navbar-light " id="navigator">
+                            <li class="nav-item dropdown active">
+                                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                                    data-toggle="dropdown" href="#" id="navbarDropdown1" role="button">
+                                    <b>Homepage</b>
+                                </a>
+                                <div aria-labelledby="navbarDropdown1" class="dropdown-menu">
+                                    <a class="dropdown-item" href="finalexam-homepage.html"><b>Homepage</b></a>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="finalexam-aboutus.html"><b>About Us</b></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="finalexam-service.html"><b>Service</b></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="finalexam-portfolio.html"><b>Portfolio</b></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="finalexam-team.html"><b>Team</b></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="FinalProjectReal.html"><b>Pricing</b></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="FinalProjectpage2.html"><b>Contact</b></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                                    data-toggle="dropdown" href="" id="navbarDropdown" role="button">
+                                    <b>Pages</b>
+                                </a>
+                                <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                                    <!--              <a class="dropdown-item" href="404.html">404 Page</a>-->
+                                    <a class="dropdown-item" href="FinalProjectpage3.html">Contact Us</a>
+                                    <a class="dropdown-item" href="single-post.html">Blog Single Page</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+
+
+        </div>
+
+
+    </header>
+    <section>
+
+        <div class="biggy bg-white">
+            <div class="filterbgheader">
+                <div class="headbgimg">
+
+                    <div class="centerunderhead">
+
+                        <div class="text-center text-light pt-sm-4 container" style="z-index: 2000;">
+                            <h3><b>Crafting Digital Experience</b></h3>
+                            <p>
+                            <h6>
+                                The red line moved across the page. With each millimeter it advanced forward,
+                                something
+                                changed
+                                in the room. The actual change taking place was difficult to perceive, but the
+                                change
+                                was real.
+                                The red line continued relentlessly across the page and the room would never be the
+                                same.
+                            </h6>
+                            </p>
+                            <div class="pt-sm-4">
+                                <button type="button" class="btn btn-primary buttonheader pl-sm-3 pr-sm-3">Explore
+                                    Us</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <body>
+        <div class="containerbody">
+
+
+            <div class="text-center text-dark" style="color:black; ">
+                <h4><b>What Do We Offer?</b>
+                </h4>
+                <p>It seemed like it should have been so simple.
+                    <hr width="30%"> There was nothing
+                </p>
+
+            </div>
+            <div class="row">
+                <div class="topbody">
+                    <div class="e ">ALL</div>
+                    <div class="e">PHOTOGRAPHY</div>
+                    <div class="e">IOSAPP</div>
+                    <div class="e">DEVELOPMENT</div>
+                    <div class="e">DESIGN</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex align-items ml-3 mr-3 mt-3 mb-3">
+            <div class="row a">
+                <div class="col-sm-6 col-md-3 f"> <img src="images/portfolio/portfolio-1.jpg" alt="" class="img-fluid"></div>
+                <div class="col-sm-6 col-md-3 f"><img src="images/portfolio/portfolio-2.jpg" alt=""  class="img-fluid"> </div>
+                <div class="col-sm-6 col-md-3 f"><img src="images/portfolio/portfolio-3.jpg" alt=""  class="img-fluid"></div>
+                <div class="col-sm-6 col-md-3 f"><img src="images/portfolio/portfolio-4.jpg" alt=""  class="img-fluid"></div>
+                <div class="col-sm-6 col-md-3 f"><img src="images/portfolio/portfolio-5.jpg" alt=""  class="img-fluid"></div>
+                <div class="col-sm-6 col-md-3 f"><img src="images/portfolio/portfolio-6.jpg" alt=""  class="img-fluid"></div>
+                <div class="col-sm-6 col-md-3 f"><img src="images/portfolio/portfolio-7.jpg" alt=""  class="img-fluid"></div>
+                <div class="col-sm-6 col-md-3 f"><img src="images/portfolio/portfolio-8.jpg" alt=""  class="img-fluid"></div>
+
+            </div>
+        </div>
+        
+        <div>
+
+            <div class="jumbotron-fluid bgblue ">
+
+                <div class="text-center text-light">
+                    <br><br>
+                    <h1><i class="tf-ion-chatbubbles"></i></h1>
+
+                    <p>
+                    <h6>
+                        hello i am writting this cause i have to <br> see this looks so dumb but here i am typing
+                        this
+                        thing and i have no ide what i am even typing <br> you know what i mean just typing
+                        pointlessly
+                        while people screaming around you
+                    </h6>
+                    </p>
+                    <br><br>
+                    <div class="text-center bg-white ">
+                        <div class="d-flex flex-column align-items-center clienttogo1">
+                            <img src="images/client-logo/clients-2.jpg" alt="" class="pfpguy ">
+                            <div class="text-center text-dark">
+                                <h4>William Martins</h4>
+                                <h6 class="text-secondary">CEO, Company Name</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </body>
+    <footer>
+
+        <div class="footerbg pt-5 container-fluid">
+            <div class="row pt-5 pl-5 text-white">
+                <div class="col-md-3 col-sm-6 col-xs-12 ">
+                    <h6><b>ABOUT</b></h6>
+                    <div class="footersize mt-2">Lorem ipsum is in spanish </div>
+                    <div class="footersize mt-2">Guess what I don't speak spanish </div>
+                    <div class="footersize mt-2">I don't know how to write too </div>
+                    <div class="footersize mt-2">This is boring </div>
+                    <div class="footersize mt-2">I hate this. </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+
+                    <h6><b>SERVICES</b></h6>
+                    <div class="footersize mt-2">Graphic Design </div>
+                    <div class="footersize mt-2">Web Design </div>
+                    <div class="footersize mt-2">Web Development </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+
+                    <h6><b>QUICK LINKS</b></h6>
+                    <div class="footersize mt-2">Partner </div>
+                    <div class="footersize mt-2">About Us </div>
+                    <div class="footersize mt-2">FAQ's </div>
+                    <div class="footersize mt-2">Badges </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+
+                    <h6><b>CONNECT WITH US SOCIALLY</b></h6>
+                    <div class="footersize mt-2">Facebook </div>
+                    <div class="footersize mt-2">Twitter </div>
+                    <div class="footersize mt-2">Youtube </div>
+                    <div class="footersize mt-2">Pinterest </div>
+                </div>
+            </div>
+    </footer>
+</body>
+
+</html>
