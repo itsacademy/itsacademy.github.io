@@ -19,7 +19,7 @@
     }
 
     .background-image {
-        background-image: url("images/about/about-header.jpg");
+        background-image: url("Bingo/images/about/about-header.jpg");
         background-repeat: no-repeat;
         /* background-size: cover; */
         width: 100%;
@@ -27,6 +27,27 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .background-images {
+        background-image: url("Bingo/images/pricing-bg.jpg");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 700px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background-size: cover;
+    }
+
+    .navigator-black-color li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .background-image li:hover {
+        color: blue !important;
+        background-color: blue !important;
     }
 
     .gray-line {
@@ -37,17 +58,47 @@
         user-select: auto;
     }
 
-    .no-style {
-        list-style-type: none;
+    .white-line {
+        background-color: rgb(199, 195, 195);
+        height: 3px;
+        width: 100px;
+        margin-bottom: 25px;
+        user-select: auto;
     }
 
-    .no-style li {
-        /* list-style-type: none; */
-        margin-left: 10px;
+    .checklist li:before {
+        position: absolute;
+        margin-right: 12px;
+        margin-left: -45px;
+        content: "\f375";
+        font-family: "themefisher-font";
+        opacity: 1;
+        border-radius: 50%;
+        /* padding: 28px; */
+        font-size: 20px;
     }
-    a.nav-link {
-        text-decoration: none !important;
-        color: black;
+
+    .checklist li {
+        list-style-type: none;
+        position: relative;
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #777;
+        font-family: "Source Sans Pro", sans-serif;
+    }
+
+    .text-block {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .bruh li {
+        list-style-type: none;
     }
 </style>
 
@@ -91,65 +142,108 @@
                 </li>
             </ul>
         </div>
+
     </div>
     <div id="jumbotron" class="container">
 
         <div class="background-image">
-            <!-- <img src="C:\Users\HP\OneDrive\Documents\HTML CSS\FinalProject\Bingo-project\images\about\about-header.jpg"> -->
             <div class="display-center text-dark pl-2">
-                <h2 class="d-flex justify-content-center " style="align-items: center;">Contact Us</h2>
+                <h2 class="d-flex justify-content-center " style="align-items: center;">Easy Pricing</h2>
             </div>
         </div>
     </div>
+
     <div class="container" style="padding: 100px;">
-        <p style="display: flex; justify-content: center; font-size: 25px;"><b>Get In Touch</b></p>
+        <p style="display: flex; justify-content: center; font-size: 25px;"><b>We Are Bingo Agency</b></p>
         <p style="display: flex; justify-content: center;" class="text-center">Lorem ipsum dolor sit amet, consecteur
             adipisicing elit. Quibusdam reprehenderit <br>accusamus labore iusto, aut, eum itaque illo totam tempora
             eius.</br></p>
         <div style="justify-content: center;" class="d-flex">
             <div class="gray-line d-flex my-auto"></div>
         </div>
-    </div>
-
-    <div class="d-flex container p-4">
-        <div class="col-sm-6">
-            <h4>Contact Details</h4>
-            <p style="color: gray; font-size: 17px;">Reflection Questions Answer the following questions in
-                complete<br>sentences. How does class affect the type of punishment</br>Reflection Questions Answer the
-                following questions</p>
-            <p style="color: black; font-size: 16px; margin-bottom: 2px;"><i class="tf-ion-ios-home"></i> Khaja Road,
-                Bayzid, Chittagong, Bangladesh</p>
-            <p style="color: black; font-size: 16px; margin-bottom: 2px;"><i class="tf-ion-android-phone-portrait"></i>
-                Phone: +880-31-000-000</p>
-            <p style="color: black; font-size: 16px; margin-bottom: 2px;"><i class="tf-ion-android-globe"></i> Fax:
-                +880-31-000-000</p>
-            <p style="color: black; font-size: 16px; margin-bottom: 2px;"><i class="tf-ion-android-mail"></i> Email:
-                hello@gmail.com</p>
-            <div class="d-flex no-style">
-                <li class="p-3" style="border: 2px solid gray; color: black;"><a href="#"><i
-                            class="tf-ion-social-facebook"></i></a></li>
-                <li class="p-3" style="border: 2px solid gray; color: black;"><a href="#"><i
-                            class="tf-ion-social-twitter"></i></a></li>
-                <li class="p-3" style="border: 2px solid gray; color: black;"><a href="#"><i
-                            class="tf-ion-social-dribbble-outline"></i></a></li>
-                <li class="p-3" style="border: 2px solid gray; color: black;"><a href="#"><i
-                            class="tf-ion-social-linkedin-outline"></i></a></li>
-            </div>
+        <div style="display: flex;" class="mt-4">
+            <img src="images/about/about-2.png">
+            <ul class="checklist">
+                <li>There were little things that she simply could not stand.<br>The sound of someone tapping their
+                    nails on the table.</br></li>
+                <li>A person chewing with their mouth open. <br>Another human imposingthemselves into her space.</br>
+                </li>
+                <li>She couldn't stand any of these things, <br>but none of them compared to the number one thing
+                    she</br></li>
+                <li>The robot clicked disapprovingly, gurgled briefly inside its <br>cubical interior and extruded a
+                    pony glass of brownish liquid.</br> </li>
+                <li>"Sir, you will undoubtedly end up in a drunkard's grave, dead of hepatic cirrhosis,"</li>
+            </ul>
         </div>
 
-        <div class="col-sm-6">
-            <input type="text" class="form-control" placeholder="Your Name"><br>
-            <input type="text" class="form-control" placeholder="Your Email"><br>
-            <input type="text" class="form-control" placeholder="Subject"><Br>
-            <textarea class="form-control textbox2" rows="3" placeholder="Message"></textarea><Br>
-            <button style="background-color: rgb(0, 195, 255); color: white ;text-align: center; align-items: center;"
-                class="container p-2">SUBMIT</button>
+    </div>
+    <div id="jumbotron" class="container">
+        <div class="background-images">
+            <div class="display-center text-dark pl-2">
+                <h2 class="d-flex justify-content-center mt-5 " style="align-items: center; color: white;">Our Greatest
+                    Plan</h2>
+                <p style="display: flex; justify-content: center; color: white;" class="text-center">Lorem ipsum dolor
+                    sit amet, consecteur adipisicing elit. Quibusdam reprehenderit <br>accusamus labore iusto, aut, eum
+                    itaque illo totam tempora eius.</br></p>
+                <div style="justify-content: center;" class="d-flex">
+                    <div class="white-line d-flex my-auto"></div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-4 p-4">
+                        <div class="bg-white p-4">
+                            <p><b>BASIC</b></p>
+                            <h1 style="color: lightblue;">$19</h1>
+                            <p style="font-size: smaller;">Perfect for single freelancers who work by themselves</p>
+                            <ul class="bruh">
+                                <li><i class="tf-ion-ios-arrow-forward"></i> 1GB Disk Space</li>
+                                <li><i class="tf-ion-ios-arrow-forward"></i> 10 Email Account</li>
+                                <li><i class="tf-ion-ios-arrow-forward"></i> Scirpt Installer</li>
+                                <li><i class="tf-ion-ios-arrow-forward"></i> 1 GB Storage</li>
+                                <li><i class="tf-ion-ios-arrow-forward"></i> 2 GB Bandwidth</li>
+                                <li><i class="tf-ion-ios-arrow-forward"></i> 24/7 Tech Support</li>
+                            </ul>
+
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-4">
+                        <div class="bg-white p-4">
+                            <p><b>STANDARD</b></p>
+                            <h1 style="color: lightblue;">$39</h1>
+                            <p style="font-size: smaller;">Suitable for small businesses with up to 5 employmees</p>
+                            <ul class="bruh">
+                                <li><i class="tf-ion-ios-arrow-forward"></i> 1GB Disk Space</li>
+                                <li><i class="tf-ion-ios-arrow-forward"></i> 50 Email Account</li>
+                                <li><i class="tf-ion-ios-arrow-forward"></i> Scirpt Installer</li>
+                                <li><i class="tf-ion-ios-arrow-forward"></i> 1 GB Storage</li>
+                                <li><i class="tf-ion-ios-arrow-forward"></i> 10 GB Bandwidth</li>
+                                <li><i class="tf-ion-ios-arrow-forward"></i> 24/7 Tech Support</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-4">
+                        <div class="bg-white p-4">
+                            <p><b>ENTERPRISE</b></p>
+                            <h1 style="color: lightblue;">$59</h1>
+                            <p style="font-size: smaller;">Great for large businesses with more than 5 employees</p>
+                            <ul class="bruh">
+                                <li><i class="tf-ion-ios-arrow-forward"></i> Unlimited Disk Space</li>
+                                <li><i class="tf-ion-ios-arrow-forward"></i> Unlimited Email Account</li>
+                                <li><i class="tf-ion-ios-arrow-forward"></i> Scirpt Installer</li>
+                                <li><i class="tf-ion-ios-arrow-forward"></i> Unlimited GB Storage</li>
+                                <li><i class="tf-ion-ios-arrow-forward"></i> Unlimited GB Bandwidth</li>
+                                <li><i class="tf-ion-ios-arrow-forward"></i> 24/7 Tech Support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <footer>
         <div style="background-color: rgb(53, 53, 53);">
-            <div class="container d-flex no-style"
-                style="gap: 100px; padding-top: 100px; padding-bottom: 100px; justify-content: center;">
+            <div class="container d-flex" style="gap: 100px; padding-top: 100px; padding-bottom: 100px; justify-content: center;">
                 <div>
                     <div style="color: white">
                         ABOUT
@@ -220,3 +314,5 @@
         </div>
     </footer>
 </body>
+
+</html>
