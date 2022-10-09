@@ -1,0 +1,29 @@
+tr,
+td {
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    overflow: hidden;
+    contain: strict;
+    display: inline-table;
+}
+
+td {
+    height: 40px;
+}
+
+#myTable {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+#mainTable {
+    border: 20px gray solid;
+    background-color: white;
+}
+
+#stopwatch, #flags {
+    font-size: 40px;
+    color: white;
+}

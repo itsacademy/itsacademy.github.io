@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" nonce="2e497f2ccf554629a0e97932b2e" src="//local.adguard.org?ts=1655726584941&amp;type=content-script&amp;dmn=doc-00-ac-chat.googleusercontent.com&amp;pth=%2Fdownloads%2F1uortp0o2pplrllk35uph89rt4%2Fb3atmknt6me0rj9kat28t6tvug%2F1655727345000%2FoakMIIAAAAE%2F109651966911948892451%2FTWluZXN3ZWVwZXIuaHRtbA%3D%3D%3Furl_type%3DDOWNLOAD_URL%26content_type%3Dtext%2Fhtml%26auto%3Dtrue%26group_id%3DoakMIIAAAAE%26topic_id%3DQawhosmekNQ%26message_id%3DQawhosmekNQ%26authuser%3D3%26sha_256%3D16cdcb43fb7b5a86d6448aa9250f857c679d12c3f9e5652ebebd9794c93a2bd2%26content_name%3DMinesweeper.html%26nonce%3Dtvvmrvkiv9ub0%26user%3D109651966911948892451%26hash%3Dg99af9944db5lg6ubhno4ggms0&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;uag="></script>
+<script type="text/javascript" nonce="2e497f2ccf554629a0e97932b2e" src="//local.adguard.org?ts=1655726584941&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        tr,
+        td {
+            margin: 0;
+            padding: 0;
+            width: 40px;
+            overflow: hidden;
+            contain: strict;
+            display: inline-table;
+        }
+
+        td {
+            height: 40px;
+        }
+
+        #myTable {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        #mainTable {
+            border: 20px gray solid;
+            background-color: white;
+        }
+
+        #stopwatch {
+            font-size: 40px;
+            color: white;
+        }
+
+        #flags {
+            font-size: 40px;
+            color: white;
+        }
+    </style>
+
+    <script>
+        const bombLocation = []
+        const everyButtonVar = []
+        let totalLand
+        let totalBomb
+        const location0 = []
+        const preLocation0 = []
+        const nearBombLocation = []
+        const ob = []
+        let resetYet = true;
+        const even = []
+        const odd = []
+        let q = 0;
+        let stopPlay = false;
+        let flags
+
+        window.addEventListener("contextmenu", e => e.preventDefault());
+
+        function randomBombLocation(u) {
+            let repeated = false;
+            for (let a = 0; a < u; a++) {
+                let m = Math.floor(Math.random() * (ob[0][0])) + 1;
+                let n = Math.floor(Math.random() * (ob[0][0])) + 1;
+                let bomb = [m,n]
+                for (let i = 0; i < bombLocation.length; i++) {
+                    if (bombLocation[i].length === bomb.length && bombLocation[i].every(function(value, index) { return value === bomb[index]})) {
+                        repeated = true
+                    }
+                }
+                bombLocation.push(bomb);
+            }
+            if (repeated === true) {
+                bombLocation.length = 0
+                randomBombLocation(ob[0][0] * ob[0][1])
+            }
+        }
+
+        function reset() {
+            document.getElementById("myTable").innerHTML = "";
+            bombLocation.length = 0
+            everyButtonVar.length = 0
+            location0.length = 0
+            preLocation0.length = 0
+            nearBombLocation.length = 0
+            ob.length = 0
+            resetYet = true
+            q = 0
+            stopPlay = false
+            resetTimer()
+        }
+
+        function myLoop() {
+            setTimeout(function() {
+                let idOfButton = bombLocation[q][0] + "-" + bombLocation[q][1];
+                document.getElementById(idOfButton).textContent = "⚫"
+                document.getElementById(idOfButton).style.fontSize = "20px"
+                document.getElementById(idOfButton).style.paddingTop = "5px"
+                document.getElementById(idOfButton).style.display = "flex"
+                document.getElementById(idOfButton).style.justifyContent = "center"
+                let bombNumberColor = Math.floor(Math.random() * 6)
+                if (bombNumberColor === 0) {
+                    document.getElementById(idOfButton).style.background = "red"
+                } else if (bombNumberColor === 1) {
+                    document.getElementById(idOfButton).style.background = "blue"
+                } else if (bombNumberColor === 2) {
+                    document.getElementById(idOfButton).style.background = "cyan"
+                } else if (bombNumberColor === 3) {
+                    document.getElementById(idOfButton).style.background = "orange"
+                } else if (bombNumberColor === 4) {
+                    document.getElementById(idOfButton).style.background = "purple"
+                } else {
+                    document.getElementById(idOfButton).style.background = "green"
+                }
+                q++;
+                if (q < bombLocation.length) {
+                    myLoop();
+                }
+            }, 200)
+        }
+
+        let hr = 0;
+        let min = 0;
+        let sec = 0;
+        let stoptime = true;
+
+        function startTimer() {
+            if (stoptime === true) {
+                stoptime = false;
+                timerCycle();
+            }
+        }
+        function stopTimer() {
+            if (stoptime === false) {
+                stoptime = true;
+            }
+        }
+
+        function timerCycle() {
+            if (stoptime === false) {
+                setTimeout(function() {
+                    sec = parseInt(sec);
+                    min = parseInt(min);
+                    hr = parseInt(hr);
+
+                    sec = sec + 1;
+
+                    if (sec === 60) {
+                        min = min + 1;
+                        sec = 0;
+                    }
+                    if (min === 60) {
+                        hr = hr + 1;
+                        min = 0;
+                        sec = 0;
+                    }
+
+                    if (sec < 10 || sec === 0) {
+                        sec = '0' + sec;
+                    }
+                    if (min < 10 || min === 0) {
+                        min = '0' + min;
+                    }
+                    if (hr < 10 || hr === 0) {
+                        hr = '0' + hr;
+                    }
+                    document.getElementById('stopwatch').innerText =  "🕰️ " + hr + ":" + min + ":" + sec;
+                    timerCycle();
+                }, 1000)
+            }
+        }
+
+        function resetTimer() {
+            document.getElementById('stopwatch').innerHTML = "🕰️ 00:00:00";
+            stoptime = true;
+            hr = 0;
+            sec = 0;
+            min = 0;
+        }
+
+        function minesweeper(o, b) {
+            if (resetYet) {
+                resetYet = false
+                ob.push([o,b])
+                totalLand = o * o - (o * b);
+                totalBomb = o * b;
+                flags = totalBomb
+                document.getElementById("flags").innerText = "🚩 " + flags
+                console.log(totalLand, totalBomb)
+                for (let i = 1; i < o + 1; i++) {
+                    if (i % 2) {
+                        odd.push(i)
+                    } else {
+                        even.push(i)
+                    }
+                }
+
+                randomBombLocation(o * b)
+                startTimer()
+                let table = document.createElement('table');
+                table.id = "mainTable"
+                for (let j = 1; j < o + 1; j++) {
+                    let tr = document.createElement('tr');
+                    for (let i = 1; i < o + 1; i++) {
+                        let td = document.createElement('td');
+                        td.style.height = "40px"
+                        let button = document.createElement("button");
+                        button.style.border = "none";
+                        button.style.width = "40px"
+                        button.style.height = "40px"
+                        button.style.padding = "0"
+                        button.style.contain = "strict"
+                        button.style.overflow = "hidden"
+                        button.style.verticalAlign = "middle";
+                        for (let k = 0; k < even.length; k++) {
+                            if (i === even[k]) {
+                                for (let f = 0; f < odd.length; f++) {
+                                    if (j === odd[f]) {
+                                        button.style.backgroundColor = "#aad751"
+                                    }
+                                }
+                                for (let f = 0; f < even.length; f++) {
+                                    if (j === even[f]) {
+                                        button.style.backgroundColor = "#9cc946"
+                                    }
+                                }
+                            }
+                        }
+                        for (let k = 0; k < odd.length; k++) {
+                            if (i === odd[k]) {
+                                for (let f = 0; f < even.length; f++) {
+                                    if (j === even[f]) {
+                                        button.style.backgroundColor = "#aad751"
+                                    }
+                                }
+                                for (let f = 0; f < odd.length; f++) {
+                                    if (j === odd[f]) {
+                                        button.style.backgroundColor = "#9cc946"
+                                    }
+                                }
+                            }
+                        }
+                        button.id = i + "-" + j;
+                        const buttonVar = {
+                            location: [i,j],
+                            nearBomb: 0,
+                            color: false,
+                            flagON: false
+                        }
+                        button.addEventListener('auxclick', function () {
+                            if (!stopPlay) {
+                                if (!buttonVar.flagON) {
+                                    buttonVar.flagON = true
+                                    if (!buttonVar.color) {
+                                        flags -= 1
+                                        document.getElementById("flags").innerText = "🚩 " + flags
+                                        if (buttonVar.isBomb) {
+                                            this.innerText = "🚩"
+                                            this.style.fontSize = "25px"
+                                            totalBomb -= 1
+                                            console.log(totalBomb)
+                                        } else {
+                                            this.innerText = "🚩"
+                                            this.style.fontSize = "25px"
+                                        }
+                                    }
+                                } else {
+                                    this.innerText = ""
+                                    flags += 1
+                                    document.getElementById("flags").innerText = "🚩 " + flags
+                                    buttonVar.flagON = false
+                                }
+                            }
+                        });
+                        button.addEventListener('click', function () {
+                            if (stopPlay === false) {
+                                if (!buttonVar.flagON) {
+                                    let bombON = false;
+                                    for (let i = 0; i < bombLocation.length; i++) {
+                                        let stringLocation = bombLocation[i].toString()
+                                        if (buttonVar.location == stringLocation) {
+                                            bombON = true;
+                                            stopPlay = true;
+                                            myLoop();
+                                            alert("Game Over!")
+                                            stopTimer()
+                                        }
+                                    }
+                                    if (!bombON && !buttonVar.color) {
+                                        if (buttonVar.nearBomb === 0) {
+                                            for (let k = 0; k < even.length; k++) {
+                                                if (i === even[k]) {
+                                                    for (let f = 0; f < odd.length; f++) {
+                                                        if (j === odd[f]) {
+                                                            this.style.backgroundColor = "#e5c29f"
+                                                        }
+                                                    }
+                                                    for (let f = 0; f < even.length; f++) {
+                                                        if (j === even[f]) {
+                                                            this.style.backgroundColor = "#d7b899"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            for (let k = 0; k < odd.length; k++) {
+                                                if (i === odd[k]) {
+                                                    for (let f = 0; f < even.length; f++) {
+                                                        if (j === even[f]) {
+                                                            this.style.backgroundColor = "#e5c29f"
+                                                        }
+                                                    }
+                                                    for (let f = 0; f < odd.length; f++) {
+                                                        if (j === odd[f]) {
+                                                            this.style.backgroundColor = "#d7b899"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            this.textContent = ""
+                                            this.style.fontSize = null;
+                                            this.style.display = "inline"
+                                            for (i = buttonVar.location[0] - 1; i < buttonVar.location[0] + 2; i++) {
+                                                for (j = buttonVar.location[1] - 1; j < buttonVar.location[1] + 2; j++) {
+                                                    if (i < 1 || j < 1 || i > o || j > o) {
+                                                    } else {
+                                                        let myObj = everyButtonVar.find(obj => obj.id == i + "," + j)
+                                                        if (myObj.nearBomb === 0) {
+                                                            let idOfButton = myObj.location[0] + "-" + myObj.location[1];
+                                                            location0.push(myObj.location)
+                                                            document.getElementById(idOfButton).textContent = ""
+                                                            document.getElementById(idOfButton).style.fontSize = null
+                                                            document.getElementById(idOfButton).style.display = "inline"
+                                                            for (let k = 0; k < even.length; k++) {
+                                                                if (i === even[k]) {
+                                                                    for (let f = 0; f < odd.length; f++) {
+                                                                        if (j === odd[f]) {
+                                                                            document.getElementById(idOfButton).style.backgroundColor = "#e5c29f"
+                                                                        }
+                                                                    }
+                                                                    for (let f = 0; f < even.length; f++) {
+                                                                        if (j === even[f]) {
+                                                                            document.getElementById(idOfButton).style.backgroundColor = "#d7b899"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            for (let k = 0; k < odd.length; k++) {
+                                                                if (i === odd[k]) {
+                                                                    for (let f = 0; f < even.length; f++) {
+                                                                        if (j === even[f]) {
+                                                                            document.getElementById(idOfButton).style.backgroundColor = "#e5c29f"
+                                                                        }
+                                                                    }
+                                                                    for (let f = 0; f < odd.length; f++) {
+                                                                        if (j === odd[f]) {
+                                                                            document.getElementById(idOfButton).style.backgroundColor = "#d7b899"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            myObj.color = true
+                                                            totalLand -= 1
+                                                            console.log(totalLand)
+                                                        } else {
+                                                            let notSame = true
+                                                            for (let z = 0; z < nearBombLocation.length; z++) {
+                                                                if (nearBombLocation[z] === myObj.location) {
+                                                                    notSame = false
+                                                                }
+                                                            }
+                                                            if (notSame) {
+                                                                let idOfButton = myObj.location[0] + "-" + myObj.location[1];
+                                                                document.getElementById(idOfButton).textContent = myObj.nearBomb
+                                                                if (myObj.nearBomb === 1) {
+                                                                    document.getElementById(idOfButton).style.color = "blue"
+                                                                } else if (myObj.nearBomb === 2) {
+                                                                    document.getElementById(idOfButton).style.color = "green"
+                                                                } else if (myObj.nearBomb === 3) {
+                                                                    document.getElementById(idOfButton).style.color = "red"
+                                                                } else if (myObj.nearBomb === 4) {
+                                                                    document.getElementById(idOfButton).style.color = "purple"
+                                                                } else if (myObj.nearBomb === 5) {
+                                                                    document.getElementById(idOfButton).style.color = "cyan"
+                                                                } else if (myObj.nearBomb === 6) {
+                                                                    document.getElementById(idOfButton).style.color = "white"
+                                                                } else if (myObj.nearBomb === 7) {
+                                                                    document.getElementById(idOfButton).style.color = "yellow"
+                                                                } else if (myObj.nearBomb === 8) {
+                                                                    document.getElementById(idOfButton).style.color = "orange"
+                                                                }
+                                                                document.getElementById(idOfButton).style.fontSize = null
+                                                                document.getElementById(idOfButton).style.display = "inline"
+                                                                document.getElementById(idOfButton).style.justifyContent = "center"
+                                                                for (let k = 0; k < even.length; k++) {
+                                                                    if (i === even[k]) {
+                                                                        for (let f = 0; f < odd.length; f++) {
+                                                                            if (j === odd[f]) {
+                                                                                document.getElementById(idOfButton).style.backgroundColor = "#e5c29f"
+                                                                            }
+                                                                        }
+                                                                        for (let f = 0; f < even.length; f++) {
+                                                                            if (j === even[f]) {
+                                                                                document.getElementById(idOfButton).style.backgroundColor = "#d7b899"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                for (let k = 0; k < odd.length; k++) {
+                                                                    if (i === odd[k]) {
+                                                                        for (let f = 0; f < even.length; f++) {
+                                                                            if (j === even[f]) {
+                                                                                document.getElementById(idOfButton).style.backgroundColor = "#e5c29f"
+                                                                            }
+                                                                        }
+                                                                        for (let f = 0; f < odd.length; f++) {
+                                                                            if (j === odd[f]) {
+                                                                                document.getElementById(idOfButton).style.backgroundColor = "#d7b899"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                totalLand -= 1
+                                                                console.log(totalLand)
+                                                                myObj.color = true
+                                                                nearBombLocation.push(myObj.location)
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            for (let i = 0; i < location0.length; i++){
+                                                if (location0[i] === buttonVar.location) {
+                                                    preLocation0.push(location0[i])
+                                                    location0.splice(i, 1);
+                                                }
+                                            }
+
+                                            let notSame = true
+                                            while (location0.length !== 0) {
+                                                for (let k = 0; k < preLocation0.length; k++) {
+                                                    if (preLocation0[k] === location0[0]) {
+                                                        notSame = false
+                                                    }
+                                                }
+                                                if (notSame) {
+                                                    preLocation0.push(location0[0])
+                                                    for (i = preLocation0[preLocation0.length - 1][0] - 1; i < preLocation0[preLocation0.length - 1][0] + 2; i++) {
+                                                        for (j = preLocation0[preLocation0.length - 1][1] - 1; j < preLocation0[preLocation0.length - 1][1] + 2; j++) {
+                                                            if (i < 1 || j < 1 || i > o || j > o) {
+                                                            } else {
+                                                                let myObj = everyButtonVar.find(obj => obj.id == i + "," + j)
+                                                                if (myObj.nearBomb === 0) {
+                                                                    let notSame = true
+                                                                    for (let l = 0; l < preLocation0.length; l++) {
+                                                                        for (let m = 0; m < location0.length; m++) {
+                                                                            if (preLocation0[l] === myObj.location || location0[m] === myObj.location) {
+                                                                                notSame = false
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    if (notSame) {
+                                                                        location0.push(myObj.location)
+                                                                        let idOfButton = myObj.location[0] + "-" + myObj.location[1];
+                                                                        document.getElementById(idOfButton).textContent = ""
+                                                                        document.getElementById(idOfButton).style.fontSize = null
+                                                                        document.getElementById(idOfButton).style.display = "inline"
+                                                                        document.getElementById(idOfButton).style.justifyContent = "center"
+                                                                        for (let k = 0; k < even.length; k++) {
+                                                                            if (i === even[k]) {
+                                                                                for (let f = 0; f < odd.length; f++) {
+                                                                                    if (j === odd[f]) {
+                                                                                        document.getElementById(idOfButton).style.backgroundColor = "#e5c29f"
+                                                                                    }
+                                                                                }
+                                                                                for (let f = 0; f < even.length; f++) {
+                                                                                    if (j === even[f]) {
+                                                                                        document.getElementById(idOfButton).style.backgroundColor = "#d7b899"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        for (let k = 0; k < odd.length; k++) {
+                                                                            if (i === odd[k]) {
+                                                                                for (let f = 0; f < even.length; f++) {
+                                                                                    if (j === even[f]) {
+                                                                                        document.getElementById(idOfButton).style.backgroundColor = "#e5c29f"
+                                                                                    }
+                                                                                }
+                                                                                for (let f = 0; f < odd.length; f++) {
+                                                                                    if (j === odd[f]) {
+                                                                                        document.getElementById(idOfButton).style.backgroundColor = "#d7b899"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        myObj.color = true
+                                                                        totalLand -= 1
+                                                                        console.log(totalLand)
+                                                                    }
+                                                                } else {
+                                                                    let notSame = true
+                                                                    for (let z = 0; z < nearBombLocation.length; z++) {
+                                                                        if (nearBombLocation[z] === myObj.location) {
+                                                                            notSame = false
+                                                                        }
+                                                                    }
+                                                                    if (notSame) {
+                                                                        let idOfButton = myObj.location[0] + "-" + myObj.location[1];
+                                                                        document.getElementById(idOfButton).textContent = myObj.nearBomb
+                                                                        if (myObj.nearBomb === 1) {
+                                                                            document.getElementById(idOfButton).style.color = "blue"
+                                                                        } else if (myObj.nearBomb === 2) {
+                                                                            document.getElementById(idOfButton).style.color = "green"
+                                                                        } else if (myObj.nearBomb === 3) {
+                                                                            document.getElementById(idOfButton).style.color = "red"
+                                                                        } else if (myObj.nearBomb === 4) {
+                                                                            document.getElementById(idOfButton).style.color = "purple"
+                                                                        } else if (myObj.nearBomb === 5) {
+                                                                            document.getElementById(idOfButton).style.color = "cyan"
+                                                                        } else if (myObj.nearBomb === 6) {
+                                                                            document.getElementById(idOfButton).style.color = "white"
+                                                                        } else if (myObj.nearBomb === 7) {
+                                                                            document.getElementById(idOfButton).style.color = "yellow"
+                                                                        } else if (myObj.nearBomb === 8) {
+                                                                            document.getElementById(idOfButton).style.color = "orange"
+                                                                        }
+                                                                        document.getElementById(idOfButton).style.fontSize = null
+                                                                        document.getElementById(idOfButton).style.display = "inline"
+                                                                        for (let k = 0; k < even.length; k++) {
+                                                                            if (i === even[k]) {
+                                                                                for (let f = 0; f < odd.length; f++) {
+                                                                                    if (j === odd[f]) {
+                                                                                        document.getElementById(idOfButton).style.backgroundColor = "#e5c29f"
+                                                                                    }
+                                                                                }
+                                                                                for (let f = 0; f < even.length; f++) {
+                                                                                    if (j === even[f]) {
+                                                                                        document.getElementById(idOfButton).style.backgroundColor = "#d7b899"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        for (let k = 0; k < odd.length; k++) {
+                                                                            if (i === odd[k]) {
+                                                                                for (let f = 0; f < even.length; f++) {
+                                                                                    if (j === even[f]) {
+                                                                                        document.getElementById(idOfButton).style.backgroundColor = "#e5c29f"
+                                                                                    }
+                                                                                }
+                                                                                for (let f = 0; f < odd.length; f++) {
+                                                                                    if (j === odd[f]) {
+                                                                                        document.getElementById(idOfButton).style.backgroundColor = "#d7b899"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        totalLand -= 1
+                                                                        console.log(totalLand)
+                                                                        myObj.color = true
+                                                                        nearBombLocation.push(myObj.location)
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                location0.shift()
+                                            }
+                                        } else {
+                                            for (let k = 0; k < even.length; k++) {
+                                                if (i === even[k]) {
+                                                    for (let f = 0; f < odd.length; f++) {
+                                                        if (j === odd[f]) {
+                                                            this.style.backgroundColor = "#e5c29f"
+                                                        }
+                                                    }
+                                                    for (let f = 0; f < even.length; f++) {
+                                                        if (j === even[f]) {
+                                                            this.style.backgroundColor = "#d7b899"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            for (let k = 0; k < odd.length; k++) {
+                                                if (i === odd[k]) {
+                                                    for (let f = 0; f < even.length; f++) {
+                                                        if (j === even[f]) {
+                                                            this.style.backgroundColor = "#e5c29f"
+                                                        }
+                                                    }
+                                                    for (let f = 0; f < odd.length; f++) {
+                                                        if (j === odd[f]) {
+                                                            this.style.backgroundColor = "#d7b899"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            this.textContent = buttonVar.nearBomb
+                                            this.style.fontSize = null;
+                                            this.style.display = "inline"
+                                            if (buttonVar.nearBomb === 1) {
+                                                this.style.color = "blue"
+                                            } else if (buttonVar.nearBomb === 2) {
+                                                this.style.color = "green"
+                                            } else if (buttonVar.nearBomb === 3) {
+                                                this.style.color = "red"
+                                            } else if (buttonVar.nearBomb === 4) {
+                                                this.style.color = "purple"
+                                            } else if (buttonVar.nearBomb === 5) {
+                                                this.style.color = "cyan"
+                                            } else if (buttonVar.nearBomb === 6) {
+                                                this.style.color = "white"
+                                            } else if (buttonVar.nearBomb === 7) {
+                                                this.style.color = "yellow"
+                                            } else if (buttonVar.nearBomb === 8) {
+                                                this.style.color = "orange"
+                                            }
+                                            totalLand -= 1
+                                            console.log(totalLand)
+                                            buttonVar.color = true
+                                            nearBombLocation.push(buttonVar.location)
+
+                                        }
+                                    }
+                                    if (totalBomb === 0 && totalLand === 0) {
+                                        alert("You Won!")
+                                        stopPlay = true;
+                                        stopTimer()
+                                    }
+                                }
+                            }
+                            buttonVar.color = true;
+                        });
+                        for (let i = 0; i < bombLocation.length; i++) {
+                            let c = bombLocation[i][0];
+                            let d = bombLocation[i][1];
+                            for (let i = c - 1; i < c + 2; i++) {
+                                for (let j = d - 1; j < d + 2; j++) {
+                                    if (!i < 1 && !j < 1) {
+                                        i.toString()
+                                        j.toString()
+                                        if (buttonVar.location == i + "," + j) {
+                                            for (let i = 0; i < bombLocation.length; i++) {
+                                                let stringLocation = bombLocation[i].toString()
+                                                if (buttonVar.location == stringLocation) {
+                                                    buttonVar.isBomb = true;
+                                                }
+                                            }
+                                            buttonVar.nearBomb += 1
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        buttonVar.id = i + "," + j
+                        everyButtonVar.push(buttonVar)
+                        td.appendChild(button);
+                        tr.appendChild(td);
+                    }
+                    table.prepend(tr)
+                }
+                document.getElementById("myTable").appendChild(table);
+                console.log(bombLocation,"BL")
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color: lawngreen;">
+
+    <div style="display: flex; justify-content: space-evenly; background-color: #4a752c; padding: 30px; margin: 0; width: 100%">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Action
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" onclick="minesweeper(10, 1.5)">Easy</a></li>
+                <li><a class="dropdown-item" onclick="minesweeper(14, 2)">Medium</a></li>
+                <li><a class="dropdown-item" onclick="minesweeper(18, 2.5)">Hard</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" onclick="reset()">Reset</a></li>
+            </ul>
+        </div>
+
+        <div id="flags">
+
+        </div>
+
+        <div id="stopwatch">
+            🕰️ 00:00:00
+        </div>
+    </div>
+    <div id="myTable" style="">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>

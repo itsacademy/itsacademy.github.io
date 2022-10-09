@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+ .bombColor {
+    background-color: rgb(179, 179, 179);
+}
+#board {
+    /* 357px for small
+    408px for medium
+    453px for big */
+    width: 404px;
+    height: 404px;
+    border: 10px solid darkgray;
+    background-color: lightgray;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#board div {
+    width: 48px;
+    height: 48px;
+    border: 1px solid whitesmoke;
+
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-clicked {
+    background: darkgrey;
+}
+
+#flag-button {
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    background-color: lightgray;
+    border: none;
+}
+
+.x1 {
+    color: blue;
+}
+
+.x2 {
+    color: green;
+}
+
+.x3 {
+    color: rgb(201, 30, 30);
+}
+
+.x4 {
+    color: navy;
+}
+
+.x5 {
+    color: rgb(109, 40, 40);
+}
+
+.x6 {
+    color: teal;
+}
+
+.x7 {
+    color: yellow;
+}
+
+.x8 {
+    color: crimson;
+}
+
+.timer {
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+
+
+}

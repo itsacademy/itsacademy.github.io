@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link  href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="js/code.js" type="application/javascript"></script>
+    
+</head>
+
+<body style="background-color: rgb(111, 165, 111);">
+    <button type="button" class="btn" style="display: none" data-bs-toggle="modal" data-bs-target="#exampleModal" id="hidden"></button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content " style="background-color: rgb(58, 77, 109); color: aliceblue;">
+                <div class="modal-footer justify-content-center">
+                    <p id="wl" class="display-6 text-center" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; "></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1>Mines: <span id="mines-count">0</span></h1><b><button id="reset" onclick="reset()"class="btn btn-success" style="font-family:monospace;"><b>reset</b></button></b>
+    <div id="timer" class="timer pt-2 pb-2"></div>
+
+
+    <div id="board">
+
+    </div>
+    <div class="btn-group pt-2">
+        <button type="button" class="btn btn-warning dropdown-toggle" style="color:black; font-family: monospace" data-bs-toggle="dropdown" aria-expanded="false">
+            <b>Difficulty</b>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" onclick="easy()">Easy</a></li>
+            <li><a class="dropdown-item" onclick="medium()">Medium </a></li>
+            <li><a class="dropdown-item" onclick="hard()">Hard</a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(60, 90, 110) !important;
+}
+
+#board {
+    width: 404px;
+    height: 404px;
+    border: 10px solid rgb(30, 85, 76);
+    background-color: rgb(90, 155, 141);
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.minecount {
+    display:flex;
+    justify-content: center;
+}
+.reset {
+    display:flex;
+    justify-content: center;
+
+}
+
+#board div {
+    width: 48px;
+    height: 48px;
+    border: 1px solid whitesmoke;
+
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-clicked {
+    background-color: darkgrey;
+}
+
+.x1 {
+    color: rgb(138, 17, 17);
+}
+
+.x2 {
+    color: orange;
+}
+
+.x3 {
+    color: rgb(255, 230, 0);
+}
+
+.x4 {
+    color: rgb(96, 160, 1);
+}
+
+.x5 {
+    color: green;
+}
+
+.x6 {
+    color: rgb(28, 101, 144);
+}
+
+.x7 {
+    color: blueviolet;
+}
+
+.x8 {
+    color: rgb(255, 161, 224);
+}
+
+#flag-button {
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    background-color: lightgray;
+    border: none;
+}
+
+@keyframes colors {
+    0% {background-color: rgb(77, 37, 37);}
+    25% {background-color: rgb(255, 200, 80);}
+    50% {background-color: rgb(66, 109, 142);}
+    100% { background-color: rgb(37, 107, 37);}
+}
+.animation {
+    animation-name: colors;
+    animation-duration: 1s;
+}
