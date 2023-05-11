@@ -1,0 +1,954 @@
+.custom-size:before {
+    font-size: 40px;
+    color: #00394f;
+}
+
+.header {
+    background-color: #00394f;
+    font-family: Nunito;
+
+}
+
+.main-color {
+    background-color: white !important;
+    color: white !important;
+}
+
+.color-while {
+    color: black !important;
+}
+
+.textlogo {
+    font-weight: 600;
+    color: #17a2b7;
+    font-size: 33px;
+    font-family: Nunito;
+    margin-top: 15px;
+
+}
+
+.position {
+    top: 50% !important;
+}
+
+.custom-button {
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background-color: rgb(23 162 183);
+}
+
+.bg-main-color {
+    background-color: #17a2b7;
+    color: white;
+    text-align: center;
+    font-family: Handlee;
+}
+.person-img{
+    width: 200px;
+
+}
+.container {
+    margin-left:250px;
+    margin-top: 60px;
+}
+
+.img-fluid{
+    width: 390px;
+    height:480px;
+    border-radius: 1%;
+}
+.headingabout1 {
+    color:#17a2b7 ;
+    margin-top: 70px;
+}
+.headingteacher1 {
+    color:#17a2b7 ;
+    margin-top: 80px;
+    margin-right:110px;
+    height: 30px;
+}
+.headingteacher2 {
+    color:#17a2b7 ;
+    margin-top: 35px;
+    margin-right:10px;
+    height: 30px;
+}
+
+.aboutusheading{
+    margin-top: 60px;
+
+}
+
+.center {
+    margin: 0 auto;
+}
+.aboutus2 {
+    font-family: Handlee;
+    color: #00394f;
+    white-space: pre;
+}
+
+.aboutus3 {
+    font-size: 12px;
+    color: gray;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.aboutus4 {
+    font-family: Handlee;
+    color: #00394f;
+    white-space: pre;
+}
+.smallbox {
+    margin-top: 70px;
+    border-radius: 5%;
+    background-color: white;
+    box-shadow: 0 0 10px lightgrey;
+    background-color: #f8f9fb;
+}
+.smallbox2 {
+    margin-top: 20px;
+    border-radius: 3%;
+    background-color: white;
+    box-shadow: 0 0 0px lightgrey;
+    background-color: #f8f9fb;
+    height: 70px;
+}
+.smallbox3 {
+    margin-top: 50px;
+    border-radius: 1%;
+    background-color: white;
+    box-shadow: 0 0 0px lightgrey;
+    background-color: #f8f9fb;
+}
+.smallbox4 {
+    margin-top: 75px;
+    border-radius: 2%;
+    background-color: white;
+    box-shadow: 0 0 0px lightgrey;
+    background-color: #17a2b7;
+}
+.smallbox5 {
+    margin-top: 10px;
+    border-radius: 1%;
+    background-color: white;
+    box-shadow: 0 0 0px lightgrey;
+    background-color: #f8f9fb;
+}
+.btn-custom {
+    background-color: #f8f9fb;
+    color: #212529;
+    border-color: #f8f9fb;
+}
+.font-size:before {
+    font-size: 35px;
+    color:#17a2b7;
+    font-weight: 600;
+}
+.icon{
+    color: grey;
+}
+
+.imgaboutus2 {
+    border-radius: 2%;
+
+}
+.fa {
+    color: #17a2b7;
+
+}
+.columtext{
+    color: gray;
+    font-size: 13px;
+    padding-left: 15px;
+    font-weight: 500;
+
+
+}
+.btn {
+    margin-left: 12px;
+}
+.ourteacher1{
+    font-family: Handlee;
+    color: #00394f;
+    white-space: pre;
+    /*margin-right: 100px;*/
+    margin-bottom: 40px;
+    margin-right: 5px;
+}
+.ourteacher2   {
+    font-family: Handlee;
+    color: #00394f;
+    white-space: pre;
+    /*margin-right: 100px;*/
+    margin-bottom: 40px;
+    margin-right: 110px;
+}
+.teacher1{
+    font-family: Handlee;
+    color: #00394f;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 5px;
+}
+.aboutteacher1{
+    font-family: Handlee;
+    color: #00394f;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.subteacher1{
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.aboutsubteacher1{
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-left: 20px;
+}
+.teacher2{
+    font-family: Handlee;
+    color: #00394f;
+    text-align: center;
+    margin-top: 20px;
+}
+.aboutteacher2{
+    font-family: Handlee;
+    color: #00394f;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.subteacher2{
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+}
+.aboutsubteacher2{
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+    margin-left: 20px;
+}
+.teacher3 {
+    font-family: Handlee;
+    color: #00394f;
+    text-align: center;
+    margin-top: 20px;
+}
+.aboutteacher3 {
+    font-family: Handlee;
+    color: #00394f;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.subteacher3{
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+}
+.aboutsubteacher3{
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+    margin-left: 20px;
+}
+.nav-item-hover:hover {
+    color: #17a2b7 !important;
+}
+.teacher4 {
+    font-family: Handlee;
+    color: #00394f;
+    text-align: center;
+    margin-top: 20px;
+}
+.aboutteacher4 {
+    font-family: Handlee;
+    color: #00394f;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.subteacher4{
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.aboutsubteacher4{
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.ourteacherheading{
+    margin-right: 140px;
+    text-align: center;
+}
+.homeheading{
+margin-top: 150px;
+    margin-left: 90px;
+}
+
+.custom-size:before {
+    font-size: 40px;
+    color: #00394f;
+}
+
+.header {
+    background-color: #00394f;
+    font-family: Nunito;
+
+}
+
+.main-color {
+    background-color: white !important;
+    color: white !important;
+}
+
+.color-while {
+    color: black !important;
+}
+
+.textlogo {
+    font-weight: 600;
+    color: #17a2b7;
+    font-size: 33px;
+    font-family: Nunito;
+    padding-top: 10px;
+
+}
+
+.custom-size:before {
+    font-size: 40px;
+    color: #00394f;
+}
+
+.header {
+    background-color: #00394f;
+    font-family: Nunito;
+
+}
+
+.main-color {
+    background-color: white !important;
+    color: white !important;
+}
+
+.color-while {
+    color: black !important;
+}
+
+.textlogo {
+    font-weight: 600;
+    color: #17a2b7;
+    font-size: 33px;
+    font-family: Nunito;
+    padding-top: 10px;
+
+}
+
+.custom-button {
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background-color: rgb(23 162 183);
+}
+.headerclass {
+    height: 325px;
+    background-color: rgb(23, 162, 183);
+
+}
+
+.headertext {
+    flex-direction: column !important;
+    justify-content: center !important;
+    text-align: center;
+}
+
+.headermain {
+    font-size: 48px;
+    font-family: Handlee;
+    color: white;
+    font-weight: bold;
+
+}
+
+.headersecondary {
+    font-size: 16px;
+    font-family: Nunito;
+    color: white;
+}
+
+.bodyclass {
+    padding-top: 75px;
+}
+
+.classsubtitle {
+    color: rgb(23, 162, 183);
+    font-family: Nunito;
+    font-size: 17.5px;
+    gap: 5px;
+}
+
+.classsubtitle strong {
+    font-weight: bolder;
+    white-space: pre;
+}
+
+.classtitle {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: Handlee;
+    color: #00394f;
+    padding-bottom: 15px;
+}
+
+.bodyclasses {
+    width: 67.5%;
+    margin: 0 auto;
+    border-color: #efefef !important;
+}
+
+.customthumbnail {
+    border-color: #efefef !important;
+    border: 0px !important;
+    border-radius: 10px !important;
+}
+
+.classinfotitle {
+    padding-top: 20px;
+    font-size: 22px;
+    font-family: Handlee;
+    color: #00394f;
+    text-align: center;
+    font-weight: bold;
+}
+
+.customclass {
+    gap: 15px;
+    margin-bottom: 35px;
+
+}
+
+.fa-user {
+    font-size: 16px;
+    color: rgb(23, 162, 183);
+    padding-top: 2.5px;
+    white-space: pre;
+}
+
+.bloginfotext {
+    font-family: Nunito;
+    font-size: 14px;
+    font-weight: 750;
+    white-space: pre;
+}
+
+.bloginfo {
+    gap: 5px;
+}
+
+.fa-folder {
+    font-size: 16px;
+    color: rgb(23, 162, 183);
+    padding-top: 2.5px;
+    white-space: pre;
+}
+
+.fa-comments {
+    font-size: 16px;
+    color: rgb(23, 162, 183);
+    padding-top: 2.5px;
+    white-space: pre;
+}
+
+.bodyinfo {
+    background-color: ghostwhite;
+    border-radius: 5px !important;
+    /*box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;*/
+    width: 98%;
+    justify-self: center;
+    margin-left: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+.classtext {
+    text-align: center;
+    justify-content: center;
+    /*width: 90%;*/
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    font-family: Nunito;
+    color: dimgrey;
+    /*padding-bottom: 5px;*/
+}
+
+#join-class {
+    height: 40px;
+    background-color: #17a1b6;
+    border: 2px solid #17a1b6;
+    width: 35%;
+    border-radius: 20px;
+    padding: 5px;
+    color: white;
+    font-size: 16px;
+    font-family: Nunito;
+    margin-bottom: 25px;
+}
+
+.classinfotable {
+    width: 100%;
+    padding-bottom: 12.5px;
+}
+
+.classinfotable td {
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 16px;
+    color: dimgrey;
+
+    font-weight: 575;
+}
+
+.border-none {
+    border-collapse: collapse;
+    border: none;
+}
+
+.border-none td {
+    border: 0.5px solid darkgrey;
+
+}
+
+.border-none tr:first-child td {
+    border-top: none;
+}
+
+.border-none tr:last-child td {
+    border-bottom: none;
+}
+
+.border-none tr td:first-child {
+    border-left: none;
+}
+
+.border-none tr td:last-child {
+    border-right: none;
+}
+
+.registersubtitle {
+    color: rgb(23, 162, 183);
+    font-family: Nunito;
+    font-size: 17.5px;
+
+}
+
+.registertitle {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: Handlee;
+    color: #00394f;
+    padding-bottom: 17.5px;
+    padding-left: 12.5px;
+}
+
+.registerinfo {
+    color: dimgrey;
+    font-weight: 450;
+    font-size: 14.5px;
+    padding-left: 12.5px;
+    width: 55%;
+    font-family: Nunito;
+}
+
+
+.checkmarks {
+    padding-left: 12.5px;
+    gap: 12.5px;
+}
+
+.fa-check {
+    color: #2EC20A;
+    font-size: 20px;
+    padding-right: 5px;
+    padding-bottom: 0 !important;
+}
+
+.fa-check p {
+    color: dimgrey;
+    font-weight: 450 !important;
+    font-size: 16px !important;
+    font-family: Nunito !important;
+}
+
+#book-now {
+    height: 40px;
+    background-color: #17a1b6;
+    border: 2px solid #17a1b6;
+    width: 125px;
+    border-radius: 20px;
+    padding: 5px;
+    color: white;
+    font-size: 16px;
+    font-family: Nunito;
+    margin-bottom: 25px;
+    margin-left: 12.5px;
+    margin-top: 15px;
+}
+
+.bookingform {
+    background-color: #17a1b6;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.booking {
+    width: 65.5%;
+    margin: 0 auto;
+    border-color: #efefef !important;
+}
+
+.formheading {
+    background-color: #00394f !important;
+    width: 100%; !important;
+    color: white;
+    font-family: Handlee;
+    font-size: 32px;
+    font-weight: bold;
+    height: 100px;
+    padding: 0;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formheading p {
+    padding-top: 20px;
+}
+
+.formanswer {
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+#book-email {
+    height: 50px;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 92.5%;
+    border-radius: 5px;
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 12.5px;
+}
+
+#book-name {
+    height: 50px;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 92.5%;
+    border-radius: 5px;
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 12.5px;
+}
+
+#book-class {
+    height: 50px;
+    background-color: #00394f;
+    border: 2px solid #00394f;
+    width: 80%;
+    border-radius: 50px;
+    padding: 5px;
+    color: white;
+    font-size: 16px;
+    font-family: Nunito;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+
+.dropdownclass {
+    height: 50px !important;
+    background-color: #efefef !important;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border: 2px solid white !important;
+    text-align: center !important;
+    color: grey;
+    width: 100% !important;
+    border-radius: 5px !important;
+    padding-left: 20px !important;
+    /*padding-top: 12.5px !important;*/
+    padding-bottom: 5px !important;
+    margin-bottom: 12.5px !important;
+}
+
+.chooseclass {
+    width: 92.5% !important;
+}
+
+.caret.caret-up {
+    border-top-width: 0;
+    border-bottom: 4px solid #fff;
+}
+
+
+.footer {
+    background-color: #00394f;
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    font-family: Nunito;
+}
+
+
+.footer-logo:before {
+    font-size: 25px;
+    color: #17a1b6;
+}
+
+.footer-logo {
+    font-size: 25px;
+    color: white;
+
+}
+
+.footer-logo-text {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+.footer-info-logo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+
+}
+
+.padding-footer {
+
+    padding: 30px;
+
+}
+
+.footer-info-text {
+
+}
+
+.footer-info-info {
+    color: white;
+    padding-top: 12.5px;
+    font-size: 13px;
+    padding-left: 25px;
+}
+
+.footer-social-med {
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
+    padding-left: 25px;
+    padding-top: 12.5px;
+    gap: 7.5px;
+
+}
+
+.fa-twitter-square {
+    color: #17a1b6;
+}
+
+.fa-facebook-square {
+    color: #17a1b6;
+}
+
+.fa-linkedin {
+    color: #17a1b6;
+}
+
+.fa-square-instagram {
+    color: #17a1b6;
+}
+
+.contact-title {
+    color: #17a1b6;
+    font-size: 22.5px;
+    font-family: Handlee;
+    gap: 7.5px;
+    font-weight: bold;
+
+
+}
+
+
+.contact-address {
+    font-family: Handlee;
+    color: white;
+    gap: 15px;
+
+
+}
+
+.fa-location-dot {
+    color: #17a1b6;
+    padding-left: 2.5px;
+}
+
+.contact-email {
+    font-family: Handlee;
+    color: white;
+    gap: 15px;
+}
+
+.contact-phone {
+    font-family: Handlee;
+    color: white;
+    gap: 15px;
+}
+
+.fa-envelope {
+    color: #17a1b6;
+    /*padding-left: 2.5px;*/
+}
+
+.fa-phone {
+    color: #17a1b6;
+    /*padding-left: 2.5px;*/
+}
+
+.link-title {
+    color: #17a1b6;
+    font-size: 22.5px;
+    font-family: Handlee;
+    font-weight: bold;
+
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.list-item {
+    color: white;
+    list-style-type: none;
+    font-family: Handlee;
+}
+
+.arrow-list {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.linklist {
+    padding-left: 0;
+}
+
+.newsletter-title {
+    color: #17a1b6;
+    font-size: 22.5px;
+    font-family: Handlee;
+    gap: 7.5px;
+    font-weight: bold;
+    padding-bottom: 30px;
+
+
+}
+
+#form-name {
+    height: 37.5px;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 92.5%;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 12.5px;
+}
+
+#form-email {
+    height: 37.5px;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 92.5%;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 12.5px;
+}
+
+.hr-style {
+    border: none;
+    height: 1.5px;
+
+    background-color: #02455A;;
+}
+
+#form-send {
+    height: 40px;
+    background-color: #17a1b6;
+    /*display: flex;*/
+    /*!*flex-direction: column;*!*/
+    /*!*align-items: center;*!*/
+    /*!*justify-content: center;*!*/
+    border: 2px solid #17a1b6;
+    width: 92.5%;
+    border-radius: 25px;
+    padding: 5px;
+    color: white;
+    font-size: 13px;
+
+}
+
+.custom-copyright {
+    padding-top: 20px;
+    padding-bottom: 25px;
+    font-family: Nunito;
+}
+
+.copyright {
+    font-size: 16px;
+    color: white;
+
+}
+
+.copyright-2 {
+    color: #17a1b6 !important;
+    font-weight: 650 !important;
+
+}

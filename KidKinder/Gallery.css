@@ -1,0 +1,363 @@
+.footer {
+    background-color: #00394f;
+    font-family: Nunito;
+
+
+}
+
+
+.footer-logo:before {
+    font-size: 25px;
+    color: #17a1b6;
+}
+
+.footer-logo {
+    font-size: 25px;
+    color: white;
+
+}
+
+.footer-logo-text {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+.footer-info-logo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+
+}
+
+.padding-footer {
+
+    padding: 30px;
+
+}
+
+.footer-info-text {
+
+}
+
+.footer-info-info {
+    color: white;
+    padding-top: 12.5px;
+    font-size: 13px;
+    padding-left: 25px;
+}
+
+.footer-social-med {
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
+    padding-left: 25px;
+    padding-top: 12.5px;
+    gap: 7.5px;
+
+}
+
+.fa-twitter-square {
+    color: #17a1b6;
+}
+
+.fa-facebook-square {
+    color: #17a1b6;
+}
+
+.fa-linkedin {
+    color: #17a1b6;
+}
+
+.fa-square-instagram {
+    color: #17a1b6;
+}
+
+.contact-title {
+    color: #17a1b6;
+    font-size: 22.5px;
+    font-family: Handlee;
+    gap: 7.5px;
+    font-weight: bold;
+
+
+}
+
+
+.contact-address {
+    font-family: Handlee;
+    color: white;
+    gap: 15px;
+
+
+}
+
+.fa-location-dot {
+    color: #17a1b6;
+    padding-left: 2.5px;
+}
+
+.contact-email {
+    font-family: Handlee;
+    color: white;
+    gap: 15px;
+}
+
+.contact-phone {
+    font-family: Handlee;
+    color: white;
+    gap: 15px;
+}
+
+.fa-envelope {
+    color: #17a1b6;
+    /*padding-left: 2.5px;*/
+}
+
+.fa-phone {
+    color: #17a1b6;
+    /*padding-left: 2.5px;*/
+}
+
+.link-title {
+    color: #17a1b6;
+    font-size: 22.5px;
+    font-family: Handlee;
+    font-weight: bold;
+
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.list-item {
+    color: white;
+    list-style-type: none;
+    font-family: Handlee;
+}
+
+.arrow-list {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.linklist {
+    padding-left: 0;
+}
+
+.newsletter-title {
+    color: #17a1b6;
+    font-size: 22.5px;
+    font-family: Handlee;
+    gap: 7.5px;
+    font-weight: bold;
+    padding-bottom: 30px;
+
+
+}
+
+#form-name {
+    height: 37.5px;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 92.5%;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 12.5px;
+}
+
+#form-email {
+    height: 37.5px;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 92.5%;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 12.5px;
+}
+
+.hr-style {
+    border: none;
+    height: 1.5px;
+
+    background-color: #02455A;;
+}
+
+#form-send {
+    height: 40px;
+    background-color: #17a1b6;
+    border: 2px solid #17a1b6;
+    width: 92.5%;
+    border-radius: 25px;
+    padding: 5px;
+    color: white;
+    font-size: 13px;
+
+}
+
+.custom-copyright {
+    padding-top: 20px;
+    padding-bottom: 25px;
+    font-family: Nunito;
+}
+
+.copyright {
+    font-size: 16px;
+    color: white;
+
+}
+
+.copyright-2 {
+    color: #17a1b6 !important;
+    font-weight: 650 !important;
+
+}
+
+.custom-size:before {
+    font-size: 40px;
+    color: #00394f;
+}
+
+.header {
+    background-color: #00394f;
+    font-family: Nunito;
+
+}
+
+.main-color {
+    background-color: white !important;
+    color: white !important;
+}
+
+.color-while {
+    color: black !important;
+}
+
+.textlogo {
+    font-weight: 600;
+    color: #17a2b7;
+    font-size: 33px;
+    font-family: Nunito;
+    padding-top: 10px;
+
+}
+
+.custom-button {
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background-color: rgb(23 162 183);
+}
+
+
+.headerclass {
+    height: 325px;
+    background-color: rgb(23, 162, 183);
+
+}
+
+.headertext {
+    flex-direction: column !important;
+    justify-content: center !important;
+    text-align: center;
+}
+
+.headermain {
+    font-size: 48px;
+    font-family: Handlee;
+    color: white;
+    font-weight: bold;
+
+}
+
+.headersecondary {
+    font-size: 16px;
+    font-family: Nunito;
+    color: white;
+}
+
+.bodyclass {
+    padding-top: 80px;
+    
+}
+
+.classsubtitle {
+    color: rgb(23, 162, 183);
+    font-family: Nunito;
+    font-size: 17.5px;
+    gap: 5px;
+}
+
+.classtitle {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: Handlee;
+    color: #00394f;
+    padding-bottom: 15px;
+}
+
+.gallerysections {
+   display: flex;
+   gap: 15px;
+   padding-bottom: 35px;
+}
+
+.gallerytext {
+    font-family: Nunito ;
+    color: rgb(23, 162, 183);
+    font-size: 16px;
+    border: 2px solid rgb(23, 162, 183);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 25px;
+    
+}
+
+.gallerytextspecial {
+    font-family: Nunito ;
+    color: white;
+    font-size: 16px;
+    border: 2px solid rgb(23, 162, 183);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 25px;
+    background-color: rgb(23, 162, 183);
+}
+
+.imagegallery {
+    width: 60%;
+    margin: 0 auto;
+    border-color: #efefef !important;
+    display: flex;
+    flex-direction: row !important;
+    padding-bottom: 50px;
+}
+
+.customgallery {
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.customthumbnail {
+    border-color: #efefef !important;
+    border: 0px !important;
+    border-radius: 10px !important;
+    height: 110% !important;
+    width: 110% !important;
+}
