@@ -1,0 +1,970 @@
+body {
+    background-color: #0b0c2a;
+}
+
+.header {
+    background: #070720;
+}
+
+.header__logo {
+    padding: 20px 0 17px;
+}
+
+.header__logo a {
+    display: inline-block;
+}
+
+.header__menu {
+    text-align: center;
+}
+
+.header__menu ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin-right: 16px;
+}
+
+.header__menu ul li.active a {
+    background: #e53637;
+    color: #ffffff;
+}
+
+.header__menu ul li:hover a {
+    color: #ffffff;
+}
+
+.header__menu ul li:hover .dropdown {
+    top: 62px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.header__menu ul li:hover .dropdown li a {
+    background: transparent;
+}
+
+.header__menu ul li:last-child {
+    margin-right: 0;
+}
+
+.header__menu ul li .dropdown {
+    position: absolute;
+    left: 0;
+    top: 82px;
+    width: 150px;
+    background: #ffffff;
+    text-align: left;
+    padding: 5px 0;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    transition: all, 0.3s;
+}
+
+.header__menu ul li .dropdown li {
+    display: block;
+    margin-right: 0;
+}
+
+.header__menu ul li .dropdown li a {
+    font-size: 14px;
+    color: #111111;
+    font-weight: 500;
+    padding: 5px 20px;
+}
+
+.header__menu ul li a {
+    font-size: 15px;
+    color: #b7b7b7;
+    display: block;
+    font-weight: 700;
+    -webkit-transition: all, 0.5s;
+    -o-transition: all, 0.5s;
+    transition: all, 0.5s;
+    padding: 20px;
+}
+
+.header__menu ul li a span {
+    position: relative;
+    font-size: 17px;
+    top: 2px;
+}
+
+.header__icon {
+    color: white;
+    margin: 0 30px 0 0;
+
+}
+
+.mb-0 {
+    margin-bottom: 0px;
+}
+
+.footer {
+    background: #070720;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.page-up {
+    position: absolute;
+    left: 50%;
+    top: -25px;
+    margin-left: -25px;
+}
+
+.page-up a {
+    display: inline-block;
+    font-size: 36px;
+    color: #ffffff;
+    height: 50px;
+    width: 50px;
+    background: #e53637;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.page-up a span {
+    position: relative;
+    top: 2px;
+    left: -1px;
+}
+
+.footer__nav {
+    text-align: center;
+}
+
+.footer__nav ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin-right: 40px;
+}
+
+.footer__nav ul li:last-child {
+    margin-right: 0;
+}
+
+.footer__nav ul li a {
+    font-size: 15px;
+    color: #b7b7b7;
+    display: block;
+    font-weight: 700;
+}
+
+.footer__copyright__text {
+    color: #b7b7b7;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.footer__copyright__text a {
+    color: #e53637;
+}
+
+.mahmoud {
+    background-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0)), url('../img/jjkseason2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 75%;
+    height: 600px;
+    margin: 0 auto;
+
+}
+
+.mahmoud1 {
+    position: relative;
+    left: 7%;
+    top: 61%;
+    color: white;
+    font-size: 40px;
+    font-family: "Oswald", sans-serif;
+    padding: 6px 14px 6px 0;
+}
+
+.mahmoud2 {
+    position: relative;
+    left: 7%;
+    top: 60%;
+    color: white;
+    font-size: 12px;
+    font-family: Helvetica;
+    padding: 6px 14px 6px 0;
+}
+
+.mahmoud3 {
+    position: relative;
+    left: 3.3%;
+    top: 59%;
+    color: crimson;
+    font-size: 15px;
+    background-color: white;
+    padding: 6px 14px 6px 14px;
+}
+
+
+.animerow1 {
+    margin-top: 40px;
+    background-image: url("../img/csm.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow2 {
+    margin-top: 40px;
+    background-image: url("../img/bluelock.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow3 {
+    margin-top: 40px;
+    background-image: url("../img/jojo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow4 {
+    margin-top: 40px;
+    background-image: url("../img/demonslayer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow5 {
+    margin-top: 40px;
+    background-image: url("../img/blackclover.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow6 {
+    margin-top: 40px;
+    background-image: url("../img/jjk.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow7 {
+    margin-top: 40px;
+    background-image: url("../img/knys1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow8 {
+    margin-top: 40px;
+    background-image: url("../img/opm.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow9 {
+    margin-top: 40px;
+    background-image: url("../img/haikyuu.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow10 {
+    margin-top: 40px;
+    background-image: url("../img/mha.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow11 {
+    margin-top: 40px;
+    background-image: url("../img/sao.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow12 {
+    margin-top: 40px;
+    background-image: url("../img/sxf.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow13 {
+    margin-top: 40px;
+    background-image: url("../img/liw.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow14 {
+    margin-top: 40px;
+    background-image: url("../img/ff.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow15 {
+    margin-top: 40px;
+    background-image: url("../img/aot.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow16 {
+    margin-top: 40px;
+    background-image: url("../img/toilet.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow17 {
+    margin-top: 40px;
+    background-image: url("../img/bleach.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow18 {
+    margin-top: 40px;
+    background-image: url("../img/onepiece.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow19 {
+    margin-top: 40px;
+    background-image: url("../img/la1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow20 {
+    margin-top: 40px;
+    background-image: url("../img/la2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow21 {
+    margin-top: 40px;
+    background-image: url("../img/la3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow22 {
+    margin-top: 40px;
+    background-image: url("../img/la4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow23 {
+    margin-top: 40px;
+    background-image: url("../img/la5.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.animerow24 {
+    margin-top: 40px;
+    background-image: url("../img/la6.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.watchnow {
+    position: relative;
+    left: 7%;
+    top: 61.5%;
+    color: white;
+    font-size: 20px;
+    background-color: crimson;
+    font-family: "Oswald", sans-serif;
+}
+
+.watchnow1 {
+    position: relative;
+    left: 7.3%;
+    top: 61.5%;;
+    color: white;
+    font-size: 20px;
+    background-color: crimson;
+    padding: 11px 2px 7px 2px;
+}
+
+.colortext {
+    color: white !important;
+}
+
+.leftsection {
+    width: 1100px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+.rightsection {
+    width: 1100px;
+    height: 600px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+.trending {
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    border-left: 5px solid crimson;
+}
+
+.trending1 {
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 17px;
+    border-left: 5px solid crimson;
+}
+
+.viewall {
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-size: 13px;
+
+}
+
+.arrowpoint {
+    color: white;
+    padding: 10px;
+}
+
+.topright18 {
+    position: relative;
+    left: 10px;
+    top: 7px;
+    color: white;
+    font-size: 13px;
+    background-color: crimson;
+    padding: 3px 17px 3px 17px;
+    font-family: "Mulish", sans-serif;
+    border-radius: 2px;
+}
+
+.chaticon {
+    color: white;
+    padding: 2px;
+}
+
+.commenters {
+    position: relative;
+    left: -60px;
+    top: 265px;
+    color: white;
+    font-size: 13px;
+    background-color: #444444;
+    padding: 3px 9px 3px 9px;
+    font-family: Helvetica;
+    border-radius: 2px;
+}
+
+.viewers5 {
+    position: relative;
+    left: 90px;
+    top: -120px;
+    color: #89899f;
+    font-size: 12px;
+    padding: 4px 12px 4px 12px;
+    font-family: "Mulish";
+}
+
+.viewers4 {
+    position: relative;
+    left: 90px;
+    top: -115px;
+    color: #89899f;
+    font-size: 12px;
+    padding: 4px 12px 4px 12px;
+    font-family: "Mulish";
+}
+
+.viewers3 {
+    position: relative;
+    left: 90px;
+    top: -125px;
+    color: #89899f;
+    font-size: 12px;
+    padding: 4px 12px 4px 12px;
+    font-family: "Mulish";
+}
+
+.viewers2 {
+    position: relative;
+    left: 90px;
+    top: -110px;
+    color: #89899f;
+    font-size: 12px;
+    padding: 4px 12px 4px 12px;
+    font-family: "Mulish";
+}
+
+.viewers1 {
+    position: relative;
+    left: 170px;
+    top: 7px;
+    color: white;
+    font-size: 14px;
+    background-color: #444444;
+    padding: 4px 12px 4px 12px;
+    font-family: Helvetica;
+    border-radius: 2px;
+}
+
+.viewers {
+    position: relative;
+    left: 25px;
+    top: 265px;
+    color: white;
+    font-size: 13px;
+    background-color: #444444;
+    padding: 3px 9px 3px 9px;
+    font-family: Helvetica;
+    border-radius: 2px;
+
+}
+
+
+.viewicon {
+    color: white;
+    padding: 0px 3px 0px 0px;
+}
+
+.textunder {
+}
+
+.activeindicator {
+    position: relative;
+    left: 1px;
+    top: 14px;
+    color: white;
+    font-size: 9px;
+    background-color: #48485d;
+    padding: 3px 9px 3px 9px;
+    font-family: "Mulish", sans-serif;
+    border-radius: 10px;
+    font-weight: bold
+}
+
+.activeindicatornc {
+    position: relative;
+    left: 100px;
+    top: -120px;
+    color: white;
+    font-size: 10px;
+    background-color: #48485d;
+    padding: 3px 11px 3px 11px;
+    font-family: "Mulish", sans-serif;
+    border-radius: 10px;
+    font-weight: bold
+}
+
+.seriesindicator {
+    position: relative;
+    left: 3px;
+    top: 14px;
+    color: white;
+    font-size: 9px;
+    background-color: #48485d;
+    padding: 3px 9px 3px 9px;
+    font-family: "Mulish", sans-serif;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.seriesindicatornc {
+    position: relative;
+    left: 101px;
+    top: -120px;
+    color: white;
+    font-size: 10px;
+    background-color: #48485d;
+    padding: 3px 11px 3px 11px;
+    font-family: "Mulish", sans-serif;
+    border-radius: 10px;
+    font-weight: bold
+}
+
+.title {
+    color: white;
+    position: relative;
+    font-family: "Mulish", sans-serif;
+    top: 25px;
+}
+
+.trendingthing {
+    padding: 0px 0px 120px 0px;
+}
+
+.rightonimg {
+    position: relative;
+    left: 15px;
+    top: -50px;
+    color: white;
+    font-size: 15px;
+    font-family: "Mulish", sans-serif;
+}
+
+.nexttoimg {
+    position: relative;
+    left: 100px;
+    top: -115px;
+    color: white;
+    font-size: 25px;
+    font-family: "Mulish", sans-serif;
+}
+
+.nexttoimg1 {
+    position: relative;
+    left: 100px;
+    top: -110px;
+    color: white;
+    font-size: 12px;
+    font-family: "Mulish", sans-serif;
+}
+
+.nexttoimg2 {
+    position: relative;
+    left: 100px;
+    top: -110px;
+    color: white;
+    font-size: 14px;
+    font-family: "Mulish", sans-serif;
+}
+
+.jojoimg {
+    margin-top: 40px;
+    background-image: linear-gradient(to bottom, transparent, transparent, rgb(0, 0, 0)), url('../img/jojo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+    border-radius: 5px;
+}
+
+.csmimg {
+    margin-top: -20px;
+    background-image: linear-gradient(to bottom, transparent, transparent, rgb(0, 0, 0)), url('../img/csm.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+    border-radius: 5px;
+}
+
+.bluelockimg {
+    margin-top: -20px;
+    background-image: linear-gradient(to bottom, transparent, transparent, rgb(0, 0, 0)), url('../img/bluelock.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+    border-radius: 5px;
+}
+
+.jjkimg {
+    margin-top: 46px;
+    background-image: url("../img/jjk.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 26%;
+    border-radius: 5px; 
+}
+
+.mhaimg {
+    margin-top: -90px;
+    background-image: url("../img/mha.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 26%;
+    border-radius: 5px; 
+}
+
+.blackcloverimg {
+    margin-top: -105px;
+    background-image: url("../img/blackclover.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 26%;
+    border-radius: 5px; 
+}
+
+.demonslayerimg {
+    margin-top: -94px;
+    background-image: url("../img/demonslayer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 26%;
+    border-radius: 5px; 
+}
+
+.leftbtn {
+    position: absolute;
+    color: white;
+    border: 5px solid #0b0c2a;
+    background-color:#2b2b42;
+    font-size: 40px;
+    bottom: 300px;
+    left: 177px;
+    transform: rotate(45deg);
+    height: 66px;
+    width: 66px;
+}
+
+.rightbtn {
+    position: absolute;
+    color: white;
+    border: 5px solid #0b0c2a;
+    background-color:#2b2b42;
+    font-size: 40px;
+    bottom: 300px;
+    left: 1277px;
+    transform: rotate(45deg);
+    height: 66px;
+    width: 66px;
+}
+
+.arrow_carrot-left {
+}
+
+.ltext {
+    display: inline-block;
+    transform: rotate(-45deg);
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.btn-lg {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.btn-lg2 {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.leftbtn span {
+    display: block;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    font-weight: 50;
+}
+
+.rightbtn span {
+    display: block;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    font-weight: 50;
+}
+
+.dotfull {
+    display:inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    top: 565px;
+    left: 545px;
+}
+
+.dotgray {
+    display:inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.5;
+    position: relative;
+    top: 565px;
+    left: 527.5px;
+}
+
+.dotgray2 {
+    display:inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.5;
+    position: relative;
+    top: 565px;
+    left: 510px;
+}
+
+@media only screen and (max-width: 575.20px) {
+    .animerow1, .animerow2, .animerow3, .animerowp4, .animerow5, .animerow6 {
+        margin-top: 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+        width: 42%;
+        border-radius: 5px;
+    }
+    .viewers {
+         left: 56%;
+    }
+ }
+
+ @media only screen and (max-width: 582.4px) {
+    .mahmoud1 {
+        top: 42%;
+    }
+    .mahmoud2 {
+        top: 41%;
+    }
+    .mahmoud3 {
+        top: 40%;
+        left: -4%;
+    }
+    .watchnow {
+        position: relative;
+        left: 7%;
+        top: 41%;
+        color: white;
+        font-size: 20px;
+        background-color: crimson;
+        font-family: "Oswald", sans-serif;
+    }
+    .watchnow1 {
+        position: relative;
+        left: 8%;
+        top: 41%;
+        color: white;
+        font-size: 20px;
+        background-color: crimson;
+        font-family: "Oswald", sans-serif;
+    }
+}
+
+@media only screen 
+and (min-width: 582.4px) 
+and (max-width: 1074.2px) {
+    .mahmoud1 {
+        top: 52%;
+    }
+    .mahmoud2 {
+        top: 50.5%;
+    }
+    .mahmoud3 {
+        top: 50%;
+        left: 1%;
+    }
+    .watchnow {
+        position: relative;
+        left: 7%;
+        top: 50%;
+        color: white;
+        font-size: 20px;
+        background-color: crimson;
+        font-family: "Oswald", sans-serif;
+    }
+    .watchnow1 {
+        position: relative;
+        left: 8%;
+        top: 50%;
+        color: white;
+        font-size: 20px;
+        background-color: crimson;
+        font-family: "Oswald", sans-serif;
+    }
+}
+ 
